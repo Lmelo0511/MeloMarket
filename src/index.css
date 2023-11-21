@@ -1,13 +1,80 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cabecalho{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightgreen;
+}
+
+.botaoMenu,
+.botaoCompras{
+  margin: 1%;
+  cursor: pointer;
+  border: none;
+  background-color: lightgreen;
+}
+
+.imagem1,
+.imagem2{
+  width: 100%;
+  height: 690px;
+}
+
+.secao2{
+  background-color: lightgreen;
+}
+
+.titulo1{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.container1{
+  display: inline-block;
+  height: 70%;
+  width: 20.3%;
+  background-color: white;
+  border: 2px solid darkred;
+  justify-content: center;
+  margin: 5% 6% 5% 7%;
+  border-radius: 5px;
+}
+
+.imagem3{
+  width: 90%;
+  margin: 5%;
+}
+
+.tituloProduto{
+  text-align: center;
+}
+
+.botaoPrincipal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botaoMais{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.rodape{
+  margin-top: 2%;
+}
+
+.endereco,
+.titulo2{
+  padding: 4%;
+  position: absolute;
+  font-size: 20px;
 }
