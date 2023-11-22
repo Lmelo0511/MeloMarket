@@ -12,24 +12,71 @@
 }
 
 .botaoMenu,
-.botaoCompras{
+.Logo{
   margin: 1%;
   cursor: pointer;
   border: none;
   background-color: lightgreen;
 }
 
+.cabecalho p{
+  font-size: 25px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navBar{
+  overflow: hidden;
+  position: relative;
+}
+
+.meusLinks{
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  display: grid;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.atalhos{
+  padding: 5%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.carrosel-item {
+  position: relative;
+  text-align: center; 
+}
+
+.carrosel-item h1 {
+  position: absolute;
+  top: 40%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
+
 .imagem1,
 .imagem2{
   width: 100%;
   height: 690px;
+  object-fit: cover;
+  object-position: 0 60%;
+}
+
+.primeiroTitulo{
+  margin-top: 5%;
 }
 
 .secao2{
   background-color: lightgreen;
 }
 
-.titulo1{
+.titulo2{
   text-align: center;
   margin-top: 2%;
 }
@@ -72,9 +119,15 @@
   margin-top: 2%;
 }
 
-.endereco,
-.titulo2{
+.titulo3{
   padding: 4%;
   position: absolute;
-  font-size: 20px;
+  font-size: 35px;
 }
+
+.endereco{
+  padding: 7% 0% 2% 4%;
+  position: absolute;
+  font-size: 25px;
+}
+
