@@ -20,25 +20,27 @@ function App() {
       </header>
       <div style={{padding: 20}}>
         <Carousel>
-          <Carousel.Item>
+          <Carousel.Item className='carrosel-item'>
             <img
               className="imagem1"
               src={imagem1}
               alt="Image One"
             />
+            <h1>Reaproveite melhor os alimentos</h1>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className='carrosel-item'>
             <img
               className="imagem2"
               src={imagem2}
               alt="Image Two"
             />
+            <h1>Economize e ganhe saúde</h1>
           </Carousel.Item>
         </Carousel>
       </div>
       <div className='secao2'>
         <br></br>
-        <h1 className='titulo1'>Principais Ofertas</h1>
+        <h2 className='titulo2'>Principais Ofertas</h2>
         <section>
           <div className='container1'>
             <img 
@@ -88,7 +90,7 @@ function App() {
         </section>
         <footer className='rodape' style={{backgroundColor: 'white'}}>
           <div className='Informacao' color='white'>
-            <h2 className='titulo2'>Endereço:</h2>
+            <h3 className='titulo3'>Endereço:</h3>
             <br></br><br></br>
             <p className='endereco'>
               Av. Alípio Octaviano de Souza Paraíso<br></br> 
