@@ -12,11 +12,38 @@
 }
 
 .botaoMenu,
-.botaoCompras{
+.Logo{
   margin: 1%;
   cursor: pointer;
   border: none;
   background-color: lightgreen;
+}
+
+.cabecalho p{
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navBar{
+  overflow: hidden;
+  position: relative;
+}
+
+.meusLinks{
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  display: grid;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.atalhos{
+  padding: 5%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 
 .carrosel-item {
@@ -83,19 +110,42 @@
 
 .botaoMais{
   background-color: transparent;
+  border-color: white;
   color: black;
-  border: 2px solid black;
+  box-shadow: 0 0 40px 40px transparent inset, 0 0 0 0 transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+.botaoMais:hover{
+  box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
 }
 
 .rodape{
   margin-top: 2%;
 }
 
-.endereco,
 .titulo3{
   padding: 4%;
   position: absolute;
-  font-size: 20px;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.endereco{
+  padding: 7% 0% 2% 4%;
+  position: absolute;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Logo2{
+  font-size: 8em;
+  font-family: 'Pacifico', cursive;
+  float: right;
+  color: lightgreen;
+  padding: 5%;
 }
