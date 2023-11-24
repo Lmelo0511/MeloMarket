@@ -101,7 +101,7 @@ function App() {
             <p className='tituloProduto'>Imagem teste</p>
           </div>
           <div className='botaoPrincipal'>
-            <button className='botaoMais' onClick={paginas}>
+            <button className='botaoMais'>
               <a>Saiba Mais</a>
             </button>
           </div>
