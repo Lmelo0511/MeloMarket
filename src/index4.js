@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './estilizacaoTelas/index.css';
-import App from './App';
+import Tela3 from './componentes/Contato';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('sobre'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Tela3 />
   </React.StrictMode>
 );
 
