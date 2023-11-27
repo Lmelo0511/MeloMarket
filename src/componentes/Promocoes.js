@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Tela2(){
+function Promocoes(){
     return(
         <div>
             <h1>
@@ -11,4 +11,4 @@ function Tela2(){
     )
 }
 
-export default Tela2;
+export default Promocoes;

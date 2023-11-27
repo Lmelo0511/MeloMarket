@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Tela3(){
+function Sobre(){
     return(
         <div>
             <h1>
@@ -11,4 +11,4 @@ function Tela3(){
     )
 }
 
-export default Tela3;
+export default Sobre;

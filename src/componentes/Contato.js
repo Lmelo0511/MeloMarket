@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Tela1() {
+function Contato() {
  return (
     <div>
 
@@ -11,4 +11,4 @@ function Tela1() {
  );
 }
 
-export default Tela1;
+export default Contato;
