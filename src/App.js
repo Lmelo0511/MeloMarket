@@ -29,9 +29,9 @@ function App() {
             )}
           </button>
           <p className='Logo'>MeloMarket</p>
-        </header> 
+        </header>
+        <Rotas/>
       </div>
-      <Rotas/> 
     </div>
   );
 }
