@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import Roteador from './roteador';
 import { GiHamburgerMenu } from "react-icons/gi";
-import Rotas from './rotas';
 import { Link } from 'react-router-dom';
 
 function App() {
@@ -21,16 +21,18 @@ function App() {
             {menuAberto && (
               <div className='navBar'>
                 <div className='meusLinks'>
-                  <Link className='atalhos' to='./componentes/Contato'>Contatos</Link>
-                  <Link className='atalhos' to='./componentes/Promocoes'>Promocoes</Link>
-                  <Link className='atalhos' to='./componentes/Sobre'>Sobre</Link>
+                  <Link className='atalhos' to='contato'>Contato</Link>
+                  <Link className='atalhos' to='promocoes'>Promocoes</Link>
+                  <Link className='atalhos' to='sobre'>Sobre</Link>
                 </div>                  
               </div>
             )}
           </button>
-          <p className='Logo'>MeloMarket</p>
-        </header>
-        <Rotas/>
+          <p className='Logo'>
+            <Link className='linkLogo' to='home'>MeloMarket</Link>  
+          </p>
+        </header>      
+        <Roteador/>
       </div>
     </div>
   );
