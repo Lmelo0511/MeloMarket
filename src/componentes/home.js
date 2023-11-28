@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div className="secao1">
-      <div className='container' style={{padding: 20}}>
+      <div className='container'>
         <Carousel>
           <Carousel.Item className='carrosel-item'>
             <img

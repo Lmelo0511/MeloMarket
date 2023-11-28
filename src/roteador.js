@@ -1,22 +1,22 @@
 import React from "react";
-import Contato from './componentes/Contato';
-import Promocoes from './componentes/Promocoes';
-import Sobre from './componentes/Sobre';
-import Home from "./componentes/home";
 import { Routes, Route } from 'react-router-dom';
+import Contato from "./componentes/Contato";
+import Promocoes from "./componentes/Promocoes";
+import Sobre from "./componentes/Sobre"
+import Home from "./componentes/home";
 
-function Roteador(){
-  return(
-    <Routes>
-      <Route           
-          path='/'
-          element = {
+function roteador(){
+    return(
+      <Routes>
+        <Route           
+            path='/'
+            element = {
             <Home/>
-          }>
-      </Route>  
-      <Route 
-          path='contato'
-          element = {
+            }>
+        </Route>
+        <Route           
+            path='contato'
+            element = {
             <Contato/>
           }>
       </Route>
@@ -42,4 +42,4 @@ function Roteador(){
   );
 }
 
-export default Roteador;
+export default roteador;
