@@ -5,7 +5,7 @@ import Sobre from './componentes/Sobre';
 import Home from "./componentes/home";
 import { Routes, Route } from 'react-router-dom';
 
-function Rotas(){
+function Roteador(){
   return(
     <Routes>
       <Route           
@@ -32,8 +32,14 @@ function Rotas(){
             <Sobre/>
           }>    
       </Route>
+      <Route
+          path="home"
+          element = {
+            <Home></Home>
+          }> 
+      </Route>
     </Routes>    
   );
 }
 
-export default Rotas;
+export default Roteador;

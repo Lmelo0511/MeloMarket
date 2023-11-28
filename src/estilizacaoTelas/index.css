@@ -9,8 +9,6 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: lightgreen;
-  position: fixed;
-  width: 100%;
 }
 
 .botaoMenu,
@@ -48,10 +46,19 @@
   font-size: 20px;
 }
 
+.linkLogo{
+  text-decoration: none;
+  color: black;
+  font-family: 'Pacifico', cursive;  
+}
+
+.secao1{
+  background-color: darkgray;
+}
+
 .carrosel-item {
   position: relative;
   text-align: center; 
-  margin-top: 5em;
 }
 
 .carrosel-item h1 {
@@ -80,9 +87,11 @@
   background-color: lightgreen;
 }
 
-.titulo2{
+.tituloOferta{
   text-align: center;
   margin-top: 2%;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .container1{
@@ -125,6 +134,12 @@
 
 .botaoMais:hover{
   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+}
+
+.acessoPromocoes{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 
 .rodape{

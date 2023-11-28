@@ -1,9 +1,144 @@
 *{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+   padding: 0;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.corpo{
+   background-color: darkgray;
+   height: 75em;
+}
+
+.Mapa{
+    width: 55em;
+    height: 36em;
+    background-color: darkgray;
+    border-radius: 15px;
+}
+
+.mapaEFormulario{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloEMapa{
+    margin-right: 4%;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
+    padding: 0% 3% 3% 3%;
 }
 
 .titulo1{
-    text-align: center;
+   text-align: center;
+   color: white;
+   font-family: 'Courier New', Courier, monospace;
+   margin-top: 2%;
+}
+
+.Linha{
+    color: lightgreen;
+    padding: 5%;
+}
+
+.titulo2{
+   text-align: center;
+   color: white;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.formulario{
+   margin: 5%;
+   border: 2px solid lightgreen;
+   border-radius: 15px;
+   width: 40%;
+   padding: 5%;
+}
+
+.secaoNome,
+.secaoEmail,
+.secaoTexto{
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+   margin: 5%;
+   width: 90%;
+}
+
+.inserindoNome,
+.inserindoEmail{
+   width: 35em;
+   border-radius: 5px;
+   border: 2px solid white;
+   background-color: transparent;
+}
+
+.inserindoTexto{
+   width: 36em;
+   height: 10em;
+   border-radius: 5px;
+   border: 2px solid white;
+   background-color: transparent;
+}
+
+.inserindoNome::placeholder,
+.inserindoEmail::placeholder,
+.inserindoTexto::placeholder{
+   color: black;
+}
+
+.botaoEnviar{
+   background-color: transparent;
+   border-color: white;
+   color: black;
+   box-shadow: 0 0 40px 40px transparent inset, 0 0 0 0 transparent;
+   -webkit-transition: all 150ms ease-in-out;
+   transition: all 150ms ease-in-out;
+   padding: 15px;
+   width: 100%;
+   border-radius: 15px;
+   border: 2px solid lightgreen;
+}
+
+.primeiroBotao{
+   display: flex;
+   justify-content: center;
+}
+
+.botaoEnviar:hover{
+   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+}
+
+.rodape{
+   margin-top: 2%;
+}
+
+.Informacao{
+   background-color: darkgray;
+   height: 30em;
+}
+
+.titulo3{
+   padding: 4%;
+   position: absolute;
+   font-size: 35px;
+   font-family: 'Courier New', Courier, monospace;
+   color: white;
+}
+
+.endereco{
+   padding: 7% 0% 2% 4%;
+   position: absolute;
+   font-size: 25px;
+   font-family: 'Courier New', Courier, monospace;
+   color: white;
+}
+
+.Logo2{
+   font-size: 8em;
+   font-family: 'Pacifico', cursive;
+   float: right;
+   color: lightgreen;
+   padding: 5%;
 }
