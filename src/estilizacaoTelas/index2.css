@@ -10,24 +10,24 @@
 }
 
 .Mapa{
-    width: 55em;
-    height: 36em;
-    background-color: darkgray;
-    border-radius: 15px;
+   width: 55em;
+   height: 36em;
+   background-color: darkgray;
+   border-radius: 15px;
 }
 
 .mapaEFormulario{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-between;
 }
 
 .tituloEMapa{
-    margin-right: 4%;
-    border: 2px solid lightgreen;
-    border-radius: 15px;
-    padding: 0% 3% 3% 3%;
+   margin-right: 4%;
+   border: 5px solid lightgreen;
+   border-radius: 15px;
+   padding: 0% 3% 3% 3%;
 }
 
 .titulo1{
@@ -38,19 +38,21 @@
 }
 
 .Linha{
-    color: lightgreen;
-    padding: 5%;
+   color: lightgreen;
+   padding: 5%;
 }
 
 .titulo2{
    text-align: center;
    color: white;
    font-family: 'Courier New', Courier, monospace;
+   line-height: 2%;
+   margin-bottom: 5%;
 }
 
 .formulario{
    margin: 5%;
-   border: 2px solid lightgreen;
+   border: 5px solid lightgreen;
    border-radius: 15px;
    width: 40%;
    padding: 5%;
@@ -69,6 +71,7 @@
 .inserindoNome,
 .inserindoEmail{
    width: 35em;
+   height: 30px;
    border-radius: 5px;
    border: 2px solid white;
    background-color: transparent;
