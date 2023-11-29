@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="secao1">
-      <div>
+      <div className='componente'>
         <header className="cabecalho">
           <button className="botaoMenu" onClick={paginas}>
             <GiHamburgerMenu size={30} color="black"/>

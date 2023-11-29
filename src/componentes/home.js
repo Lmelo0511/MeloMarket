@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div className="secao1">
-      <div className='container'>
+      <div className='componente'>
         <Carousel>
           <Carousel.Item className='carrosel-item'>
             <img
@@ -32,7 +32,7 @@ function Home() {
       </div>
       <div className='secao2'>
         <br></br>
-        <h2 className='tituloOferta'>Principais Ofertas do Dia</h2>
+        <h2 className='titulo2'>Principais Ofertas do Dia</h2>
         <section>
           <div className='container1'>
             <img 

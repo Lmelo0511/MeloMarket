@@ -19,6 +19,12 @@
   background-color: lightgreen;
 }
 
+.linkLogo{
+  font-family: 'Pacifico', cursive;
+  text-decoration: none;
+  color: black;
+}
+
 .cabecalho p{
   font-size: 30px;
   font-family: 'Pacifico', cursive;
@@ -46,13 +52,7 @@
   font-size: 20px;
 }
 
-.linkLogo{
-  text-decoration: none;
-  color: black;
-  font-family: 'Pacifico', cursive;  
-}
-
-.secao1{
+.componente{
   background-color: darkgray;
 }
 
@@ -87,11 +87,9 @@
   background-color: lightgreen;
 }
 
-.tituloOferta{
+.titulo2{
   text-align: center;
   margin-top: 2%;
-  color: black;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .container1{
@@ -132,18 +130,22 @@
   border: 3px solid white;
 }
 
+.acessoPromocoes{
+  color: black;
+  text-decoration: none;
+}
+
 .botaoMais:hover{
   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
 }
 
-.acessoPromocoes{
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-}
-
 .rodape{
   margin-top: 2%;
+}
+
+.Informacao{
+  background-color: darkgray;
+  height: 25em;
 }
 
 .titulo3{
@@ -151,6 +153,7 @@
   position: absolute;
   font-size: 35px;
   font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
 
 .endereco{
@@ -158,6 +161,7 @@
   position: absolute;
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
 
 .Logo2{
