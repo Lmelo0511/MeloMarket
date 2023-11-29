@@ -34,42 +34,56 @@ function Home() {
         <br></br>
         <h2 className='titulo2'>Principais Ofertas do Dia</h2>
         <section>
-          <div className='container1'>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='container1'>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='container1'>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='container1'>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='container1'>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='container1'>
+          <div className='containers'>
+            <img 
+              className='imagem3'
+              src={imagem3}
+            />
+            <p className='tituloProduto'>Imagem teste</p>
+          </div>
+          <div className='containers'>
+            <img 
+              className='imagem3'
+              src={imagem3}
+            />
+            <p className='tituloProduto'>Imagem teste</p>
+          </div>
+          <div className='containers'>
             <img 
               className='imagem3'
               src={imagem3}

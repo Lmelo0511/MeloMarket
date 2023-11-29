@@ -51,7 +51,7 @@ import { useState } from 'react'
                           <input
                             className='inserindoNome'
                             name='nome'
-                            placeholder='Nome'
+                            placeholder=' Nome'
                             value={nomeValue}
                             onChange={handleNomeChange}
                             {...register("nome", {
