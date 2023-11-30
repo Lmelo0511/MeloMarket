@@ -31,7 +31,7 @@ function App() {
           <p className='Logo'>
             <Link className='linkLogo' to='home'>MeloMarket</Link>  
           </p>
-        </header>      
+        </header> 
         <Roteador/>
       </div>
     </div>

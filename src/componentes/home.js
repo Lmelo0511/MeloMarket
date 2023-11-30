@@ -96,7 +96,7 @@ function Home() {
             </button>
           </div>
         </section>
-        <footer className='rodape' style={{backgroundColor: 'white'}}>
+        <footer className='rodape'>
           <div className='Informacao' color='white'>
             <h3 className='titulo3'>Endereço:</h3>
             <br></br><br></br>

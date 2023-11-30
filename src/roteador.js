@@ -5,20 +5,20 @@ import Promocoes from "./componentes/Promocoes";
 import Sobre from "./componentes/Sobre"
 import Home from "./componentes/home";
 
-function roteador(){
+function Roteador(){
     return(
       <Routes>
         <Route           
             path='/'
             element = {
-            <Home/>
+              <Home/>
             }>
         </Route>
         <Route           
             path='contato'
             element = {
-            <Contato/>
-          }>
+              <Contato/>
+            }>
       </Route>
       <Route 
           path='promocoes'
@@ -35,11 +35,11 @@ function roteador(){
       <Route
           path="home"
           element = {
-            <Home></Home>
+            <Home/>
           }> 
       </Route>
     </Routes>    
   );
 }
 
-export default roteador;
+export default Roteador;
