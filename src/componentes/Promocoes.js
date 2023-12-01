@@ -4,7 +4,7 @@ import imagem3 from "../Imagens/carrossel-img2.jpg"
 
 function Promocoes(){
     return(
-        <div className="corpoPagina">
+        <div className="corpo">
             <div>
                 <br></br>
                 <h1 className='primeiroTitulo'>Principais Ofertas do Dia</h1>

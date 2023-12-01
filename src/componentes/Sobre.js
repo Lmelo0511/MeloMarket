@@ -1,9 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Sobre(){
+function Promocoes(){
     return(
-        <div className="corpoPagina">
+        <div className="corpo">
+            <br></br>
             <div className="tituloEHistoria">
                 <h1 className="Titulo">Nossa história</h1>
                 <p className="textoHistoria">
@@ -34,4 +35,4 @@ function Sobre(){
     );
 }
 
-export default Sobre;
+export default Promocoes;

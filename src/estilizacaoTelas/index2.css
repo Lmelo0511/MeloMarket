@@ -4,8 +4,9 @@
    font-family: Arial, Helvetica, sans-serif;
 }
 
-.corpoPagina{
+.corpo{
    background-color: darkgray;
+   width: 100%;
 }
 
 .Mapa{
@@ -23,10 +24,10 @@
 }
 
 .tituloEMapa{
-   margin: 10% 5% 5% 5%;
+   margin: 10% 6% 5% 5%;
    border: 5px solid lightgreen;
    border-radius: 15px;
-   padding: 0% 3% 3% 3%;
+   padding: 7% 7% 7% 7%;
 }
 
 .titulo1{
@@ -144,3 +145,28 @@
    padding: 5%;
 }
 
+@media screen and (max-width: 430px) {
+   .corpo{
+      width: 100%;
+   }
+   .Mapa{
+      width: -webkit-fill-available;
+      height: auto;
+   }
+   .mapaEFormulario{
+      display: inline;
+      margin: 3%;
+   }
+   .tituloEMapa{
+      width: 94%;
+      margin: 15% 3%;
+   }
+   .formulario{
+      width: 90%;
+   }
+   .Logo2{
+      font-size: 45px;
+      margin-top: 5em;
+      width: 7em;
+   }
+}

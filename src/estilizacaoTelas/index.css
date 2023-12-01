@@ -9,6 +9,9 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: lightgreen;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .botaoMenu,
@@ -52,10 +55,6 @@
   font-size: 20px;
 }
 
-.componente{
-  background-color: darkgray;
-}
-
 .carrosel-item {
   position: relative;
   text-align: center; 
@@ -71,10 +70,16 @@
   font-size: 60px;
 }
 
-.imagem1,
+.imagem1{
+  width: 100%;
+  height: 55em;
+  object-fit: cover;
+  object-position: 0 25%;
+}
+
 .imagem2{
   width: 100%;
-  height: 690px;
+  height: 55em;
   object-fit: cover;
   object-position: 0 60%;
 }
@@ -84,7 +89,7 @@
 }
 
 .secao2{
-  background-color: lightgreen;
+  background-color: darkgrey;
 }
 
 .titulo2{
@@ -97,10 +102,10 @@
   height: 70%;
   width: 20.3%;
   background-color: white;
-  border: 2px solid darkgrey;
+  border: 3px solid lightgreen;
   justify-content: center;
   margin: 5% 6% 5% 7%;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .imagem3{
@@ -125,9 +130,12 @@
   box-shadow: 0 0 40px 40px transparent inset, 0 0 0 0 transparent;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
-  border: 3px solid white;
+  border: 3px solid lightgreen;
+  width: 14%;
+  font-size: 20px;
+  margin-top: 4%;
 }
 
 .acessoPromocoes{
@@ -170,4 +178,15 @@
   float: right;
   color: lightgreen;
   padding: 5%;
+}
+
+@media screen and (max-width: 430px) {
+  .containers{
+    margin: 7em 10% 5% 11%;
+    width: -webkit-fill-available;
+  }
+  .botaoMais{
+    width: auto;
+    margin: 5em 0% 5em 0% ;
+  }  
 }
