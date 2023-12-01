@@ -3,11 +3,6 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
- 
-.corpo{
-    background-color: darkgray;
-    width: 100%;
-}
 
 .primeiroTitulo{
     text-align: center;
@@ -27,6 +22,11 @@
     border-radius: 15px;
 }
 
+.Informacao{
+    background-color: darkgray;
+    height: 35em;
+}
+
 @media screen and (max-width: 430px) {
     .primeiroTitulo{
         font-size: 25px;
@@ -39,5 +39,13 @@
 
     .imagem3{
         width: -webkit-fill-available;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .Logo2{
+        font-size: 4em;
+        margin-top: 1em;
+        width: 8em;
     }
 }

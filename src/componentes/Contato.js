@@ -36,7 +36,7 @@ import { useState } from 'react'
         }
         
         return (
-            <div className='corpo'>
+            <div>
                 <div className='mapaEFormulario'>
                     <div className='tituloEMapa'>
                         <h1 className='titulo1'>Nossa Localização</h1>
