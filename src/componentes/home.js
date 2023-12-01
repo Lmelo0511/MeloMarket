@@ -76,20 +76,6 @@ function Home() {
             />
             <p className='tituloProduto'>Imagem teste</p>
           </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
           <div className='botaoPrincipal'>
             <button className='botaoMais'>
               <Link className='acessoPromocoes' to='promocoes'>Saiba Mais</Link>

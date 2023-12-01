@@ -9,8 +9,8 @@
 }
 
 .Mapa{
-   width: 50em;
-   height: 36em;
+   width: 30em;
+   height: 30em;
    background-color: darkgray;
    border-radius: 15px;
 }
@@ -23,7 +23,7 @@
 }
 
 .tituloEMapa{
-   margin-right: 4%;
+   margin: 10% 5% 5% 5%;
    border: 5px solid lightgreen;
    border-radius: 15px;
    padding: 0% 3% 3% 3%;
@@ -49,7 +49,7 @@
 }
 
 .formulario{
-   margin: 5%;
+   margin: 10% 5% 5% 5%;
    border: 5px solid lightgreen;
    border-radius: 15px;
    width: 40%;

@@ -7,7 +7,7 @@ function Promocoes(){
         <div className="corpoPagina">
             <div>
                 <br></br>
-                <h1 className='titulo2'>Principais Ofertas do Dia</h1>
+                <h1 className='primeiroTitulo'>Principais Ofertas do Dia</h1>
                 <section>
                     <div className='container1'>
                         <img 

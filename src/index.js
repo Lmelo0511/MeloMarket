@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './estilizacaoTelas/index.css';
 import './estilizacaoTelas/index2.css';
 import './estilizacaoTelas/index3.css';
-import './estilizacaoTelas/index4.css'
+import './estilizacaoTelas/index4.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
