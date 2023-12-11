@@ -26,7 +26,7 @@ import { useState } from 'react'
         
         const handleSubmit = () => {
             if(nomeValue.trim() === '' || emailValue.trim() === '' || textoValue.trim() === ''){
-                //alert("Campos vazios! Por favor Preencha-os");
+                alert("Campos vazios! Por favor Preencha-os");
             }
         }
         
@@ -51,7 +51,7 @@ import { useState } from 'react'
                           <input
                             className='inserindoNome'
                             name='nome'
-                            placeholder=' Nome'
+                            placeholder=' Nome:'
                             value={nomeValue}
                             onChange={handleNomeChange}
                             {...register("nome", {
