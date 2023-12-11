@@ -40,11 +40,3 @@
         margin-top: 2em;
     }
 }
-
-@media screen and (max-width: 1030px) {
-    .Logo2{
-        font-size: 4em;
-        margin-top: 1em;
-        width: 8em;
-    }
-}

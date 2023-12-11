@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div className="secao1">
-      <div className='componente'>
+      <div>
         <Carousel>
           <Carousel.Item className='carrosel-item'>
             <img
