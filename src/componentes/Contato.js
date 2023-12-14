@@ -24,15 +24,18 @@ import { useState } from 'react'
             setTextoValue(event.target.value);
         };
         
-        const handleSubmit = () => {
-            if(nomeValue.trim() === '' || emailValue.trim() === '' || textoValue.trim() === ''){
-                alert("Campos vazios! Por favor Preencha-os");
-            }
-        }
-        
-        function onSubmit(){
+        const onSubmit =() => {
             alert("Obrigado pela seu envio!");
             reset();
+        }
+
+        const handleSubmit = () => {
+
+            if(nomeValue.trim() === '' || emailValue.trim() === '' || textoValue.trim() === ''){
+                alert("Campos vazios! Por favor Preencha-os");
+            } else {
+                onSubmit();
+            }
         }
         
         return (
@@ -50,53 +53,52 @@ import { useState } from 'react'
                           <FaUser size={30} color='black'/>
                           <input
                             className='inserindoNome'
-                            name='nome'
                             placeholder=' Nome:'
-                            value={nomeValue}
+                            type='text'
                             onChange={handleNomeChange}
                             {...register("nome", {
-                              required: "Digite seu Nome!",
+                                required: true,
+                                maxLength: 20,
+                                pattern: /^[A-Za-z]+$/i
                             })}
                           />
                         </div>
-                        {errors && errors.nome && <p className='erro'>{errors.nome.message}</p>}
+                        {errors?.nome?.type === "required" && <p>Este campo é requerido!</p>}
+                        {errors?.nome?.type === "maxLength" && (<p>Primeiro nome não pode exceder 20 caracteres!</p>)}
+                        {errors?.nome?.type === "pattern" && (<p>Somente caracteres alfabético!</p>)}
                         
                         <div className='secaoEmail'>
                           <MdEmail size={30} color='black'/>
                           <input
-                            name='email'
-                            type='email'
                             className='inserindoEmail'
                             placeholder=' E-mail:'
-                            value={emailValue}
+                            type='email'
                             onChange={handleEmailChange}
-                            {...register("email",{
-                              required: "Digite um e-mail",
-                              pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                message: 'Digite um e-mail válido',
-                              }
+                            {...register("email", {
+                                required: true,
+                                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                message: "Digite um e-mail válido"
                             })}
                           />
                         </div>
-                        {errors && errors.email && <p className='erro'>{errors.email.message}</p>}
+                        {errors?.email?.type === "required" && <p>Este campo é requerido!</p>}
                         
                         <div className='secaoTexto'>
                             <textarea 
                                 className='inserindoTexto' 
                                 placeholder=' Mensagem:' 
                                 type='text' 
-                                name='texto' 
-                                value={textoValue}
                                 onChange={handleTextoChange}
                                 {...register("texto", {
-                                    required: "Digite uma dúvida ou sugestão!"
+                                    required: true,
+                                    message: "Digite uma dúvida ou sugestão!",
+                                    pattern: /^[A-Za-z]+$/i
                                 })}>
                             </textarea> 
                         </div>
-                        {errors && errors.texto && <p className='erro'>{errors.texto.message}</p>}
+                        {errors?.texto?.type === "required" && <p>Este campo é querido</p>}
                         <div className='primeiroBotao'>
-                            <button className='botaoEnviar' type='submit'>Enviar</button>  
+                            <button className='botaoEnviar' type='submit' onClick={onSubmit}>Enviar</button>  
                         </div>
                     </form>  
                 </div>
