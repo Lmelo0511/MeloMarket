@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { MdEmail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 
 function Contato() {
   const {
@@ -10,16 +11,10 @@ function Contato() {
     handleSubmit,
     watch,
     formState: { errors },
-    reset
   } = useForm();
 
   const onSubmit =(data) => {
     alert(JSON.stringify(data));
-  }
-
-  const Submit = () => {
-    alert("Obrigado pelo seu envio!");
-    reset();
   }
 
   const style = {
@@ -76,7 +71,7 @@ function Contato() {
           {errors?.texto?.type === "required" && <p className="notificacao" style={style}>O campo mensagens é obrigatório!</p>}
 
           <div className='primeiroBotao'>
-            <button className='botaoEnviar' type='submit' onClick={Submit}>Enviar</button>  
+            <button className='botaoEnviar' type='submit'><Link className='linkLogo' to='/'>Enviar</Link>  </button>  
           </div>      
         </form>
       </div>
