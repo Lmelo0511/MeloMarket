@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import imagem1 from "../Imagens/feira-supermercado-hortifruti.jpg"
 import imagem2 from "../Imagens/carrossel-img1.jpg"
-import imagem3 from "../Imagens/carrossel-img2.jpg"
 import { Link } from 'react-router-dom';
+import { Produtos } from './Produtos';
+import Carrinho from './Carrinho';
 
 function Home() {
+
+  const [carrinho, setCarrinho] = useState([]);
+
+  const adicionarAoCarrinho = (produto) => {
+    setCarrinho([...carrinho, produto]);
+  };
 
   return (
     <div className="secao1">
@@ -34,48 +41,28 @@ function Home() {
         <br></br>
         <h2 className='titulo2'>Principais Ofertas do Dia</h2>
         <section>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
-          <div className='containers'>
-            <img 
-              className='imagem3'
-              src={imagem3}
-            />
-            <p className='tituloProduto'>Imagem teste</p>
-          </div>
+          <Produtos
+            id={1}
+            titulo="titulo1"
+            descricao="descricao1" 
+            preco="preco1"    
+            adicionarAoCarrinho={adicionarAoCarrinho}   
+          />
+          <Produtos
+            id={2}
+            titulo="titulo2"
+            descricao="descricao2" 
+            preco="preco2"       
+            adicionarAoCarrinho={adicionarAoCarrinho} 
+          />
+          <Produtos
+            id={1}
+            titulo="titulo3"
+            descricao="descricao3" 
+            preco="preco3"       
+            adicionarAoCarrinho={adicionarAoCarrinho} 
+          />
+          <Carrinho produtosNoCarrinho={carrinho} />
           <div className='botaoPrincipal'>
             <button className='botaoMais'>
               <Link className='acessoPromocoes' to='promocoes'>Saiba Mais</Link>

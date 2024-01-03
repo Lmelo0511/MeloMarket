@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.secao1{
+    background-color: darkgray;
+    width: 100%;
+}
+
+.tituloCarrinho{
+    margin-top: 5%;
+}
+
+.Total{
+    margin: 5%;
+    font-size: 30px;
+    color: white;
+    font-family: cursive;
+    border: 3px solid lightgreen;
+    border-radius: 15px;
+    padding: 1%;
+    width: 30%;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+    font-size: 22px;
+}
+
+.botaoAdicionar,
+.botaoRemover{
+    background-color: transparent;
+    border: none;
+}

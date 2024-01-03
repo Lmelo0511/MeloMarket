@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Roteador from './roteador';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from 'react-router-dom';
+import { FaShoppingCart } from "react-icons/fa";
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
         <p className='Logo'>
           <Link className='linkLogo' to='home'>MeloMarket</Link>  
         </p>
+        <button className='botaoCarrinho'>
+          <Link className='atalhos' to='carrinho'><FaShoppingCart size={30} color="black"/></Link>
+        </button>
       </header> 
       <Roteador/>
     </div>

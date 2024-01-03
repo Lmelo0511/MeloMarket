@@ -4,6 +4,7 @@ import Contato from "./componentes/Contato";
 import Promocoes from "./componentes/Promocoes";
 import Sobre from "./componentes/Sobre"
 import Home from "./componentes/home";
+import Carrinho from "./componentes/Carrinho";
 
 function Roteador(){
     return(
@@ -27,13 +28,19 @@ function Roteador(){
           }>
       </Route>
       <Route 
-          path="sobre"
+          path='sobre'
           element = {
             <Sobre/>
           }>    
       </Route>
       <Route
-          path="home"
+          path='carrinho'
+          element = {
+            <Carrinho />
+          }>
+      </Route>
+      <Route
+          path='home'
           element = {
             <Home/>
           }> 

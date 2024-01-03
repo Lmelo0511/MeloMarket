@@ -22,6 +22,12 @@
   background-color: lightgreen;
 }
 
+.botaoCarrinho{
+  background-color: transparent;
+  border: none;
+  padding-right: 1%;
+}
+
 .linkLogo{
   font-family: 'Pacifico', cursive;
   text-decoration: none;
@@ -98,12 +104,13 @@
 }
 
 .containers{
-  display: inline-block;
+  display: inline-grid;
   height: 70%;
   width: 20.3%;
   background-color: white;
   border: 3px solid lightgreen;
   justify-content: center;
+  align-items: center;
   margin: 5% 6% 5% 7%;
   border-radius: 15px;
 }
@@ -113,8 +120,17 @@
   margin: 5%;
 }
 
-.tituloProduto{
+.tituloProduto,
+.descricaoProduto,
+.precoProduto{
   text-align: center;
+}
+
+.adicionarCarrinho{
+  padding: 2%;
+  border-radius: 6%;
+  border: 2px solid lightgreen;
+  background-color: lightgreen;
 }
 
 .botaoPrincipal{
