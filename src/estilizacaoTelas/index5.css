@@ -13,6 +13,17 @@
     margin-top: 5%;
 }
 
+.limparCarrinho{
+    font-size: 20px;
+    background-color: transparent;
+    border: 3px solid lightgreen;
+    padding: 1%;
+    border-radius: 15px;
+    display: flex;
+    float: right;
+    margin: 2% 5%;
+}
+
 .Total{
     margin: 5%;
     font-size: 30px;
@@ -35,4 +46,12 @@
 .botaoRemover{
     background-color: transparent;
     border: none;
+}
+
+.botaoApagar{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 3% 5%;
 }

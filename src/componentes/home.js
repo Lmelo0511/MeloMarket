@@ -11,9 +11,11 @@ function Home() {
 
   const [carrinho, setCarrinho] = useState([]);
 
-  const adicionarAoCarrinho = (produto) => {
-    setCarrinho([...carrinho, produto]);
-  };
+  const adicionarAoCarrinho = (novoProduto) => {
+    const novosProdutos = [...carrinho];
+    novosProdutos.push(novoProduto);
+    setCarrinho(novosProdutos);
+};
 
   return (
     <div className="secao1">
@@ -45,21 +47,21 @@ function Home() {
             id={1}
             titulo="titulo1"
             descricao="descricao1" 
-            preco="preco1"    
+            preco="10.00"    
             adicionarAoCarrinho={adicionarAoCarrinho}   
           />
           <Produtos
             id={2}
             titulo="titulo2"
             descricao="descricao2" 
-            preco="preco2"       
+            preco="20.00"       
             adicionarAoCarrinho={adicionarAoCarrinho} 
           />
           <Produtos
-            id={1}
+            id={3}
             titulo="titulo3"
             descricao="descricao3" 
-            preco="preco3"       
+            preco="30.00"       
             adicionarAoCarrinho={adicionarAoCarrinho} 
           />
           <Carrinho produtosNoCarrinho={carrinho} />
