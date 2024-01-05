@@ -5,7 +5,7 @@ import imagem1 from "../Imagens/feira-supermercado-hortifruti.jpg"
 import imagem2 from "../Imagens/carrossel-img1.jpg"
 import { Link } from 'react-router-dom';
 import { Produtos } from './Produtos';
-import Carrinho from './Carrinho';
+import Carrinho from '../componenteCarrinho/Carrinho';
 
 function Home() {
 
@@ -15,7 +15,7 @@ function Home() {
     const novosProdutos = [...carrinho];
     novosProdutos.push(novoProduto);
     setCarrinho(novosProdutos);
-};
+  };
 
   return (
     <div className="secao1">
@@ -47,21 +47,21 @@ function Home() {
             id={1}
             titulo="titulo1"
             descricao="descricao1" 
-            preco="10.00"    
+            preco="10.98"    
             adicionarAoCarrinho={adicionarAoCarrinho}   
           />
           <Produtos
             id={2}
             titulo="titulo2"
             descricao="descricao2" 
-            preco="20.00"       
+            preco="20.80"       
             adicionarAoCarrinho={adicionarAoCarrinho} 
           />
           <Produtos
             id={3}
             titulo="titulo3"
             descricao="descricao3" 
-            preco="30.00"       
+            preco="30.50"       
             adicionarAoCarrinho={adicionarAoCarrinho} 
           />
           <Carrinho produtosNoCarrinho={carrinho} />
