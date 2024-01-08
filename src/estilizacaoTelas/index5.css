@@ -117,6 +117,12 @@
     width: 90%;
 }
 
+.botaoPesquisa{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
 .numeroEComplemento,
 .bairroCidadeEEstado{
     display: flex;
@@ -150,6 +156,18 @@
     float: right;
     width: 40%;
     position: static;
+}
+
+.rua,
+.bairro,
+.cidade,
+.estado{
+    margin-bottom: 8%;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
+    padding: 2%;
+    margin-right: 2%;
+    background-color: white;
 }
 
 .formPagamento button{

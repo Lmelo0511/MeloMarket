@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import API from "../servicos/api";
+import { IoSearchSharp } from "react-icons/io5";
 
 export const FormularioCarrinho = () => {
+
+    const [input, setInput] = useState();
+    const [cep, setCep] = useState({});
+
+    async function enviarDados(){
+        if(input === ''){
+            alert("Por favor insira um CEP!");
+            return;
+        }
+
+        try{
+            const resposta = await API.get(`${input}/json`);
+            setCep(resposta.data)
+        } catch{
+            alert("Erro ao bucar o CEP! insira um CEP válido")
+            setInput("");
+        }
+    }
+
     return(
         <div>
             <div className="formCarrinhoPrincipal">
@@ -8,16 +29,19 @@ export const FormularioCarrinho = () => {
                 <p className="descricaoFormCarrinho">Informe o endereço onde deseja receber seu pedido</p>
                 <br></br>
                 <div className="formCarrinho">
-                    <input className="CEP" placeholder="Informe seu CEP:"></input>
-                    <input className="rua" placeholder="Informe sua Rua:"></input>
+                    <div className="inputEBotao">
+                        <input className="CEP" placeholder="Informe seu CEP:" value={input} onChange={(e) => setInput(e.target.value)}></input>
+                        <button className="botaoPesquisa" onClick={enviarDados}><IoSearchSharp size={30} color="white"/></button>
+                    </div>
+                    <span className="rua" placeholder="Informe sua Rua:">Rua: {cep.logradouro}</span>
                     <div className="numeroEComplemento">
                         <input className="numero" placeholder="Número:"></input>
                         <input className="complemento" placeholder="Complemento:"></input>
                     </div>
                     <div className="bairroCidadeEEstado">
-                        <input className="bairro" placeholder="Bairro:"></input>
-                        <input className="cidade" placeholder="CIdade:"></input>
-                        <input className="estado" placeholder="Estado:"></input>
+                        <span className="bairro" placeholder="Bairro:">Bairro: {cep.bairro}</span>
+                        <span className="cidade" placeholder="Cidade:">Cidade: {cep.localidade}</span>
+                        <span className="estado" placeholder="Estado:">UF: {cep.uf}</span>
                     </div>
                 </div>
             </div>
