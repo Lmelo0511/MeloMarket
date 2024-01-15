@@ -198,8 +198,11 @@
 
 @media screen and (max-width: 430px) {
   .containers{
-    margin: 7em 10% 5% 11%;
+    margin: 7em 13% 5% 11%;
     width: -webkit-fill-available;
+  }
+  .imagem3{
+    width: 90%;
   }
   .botaoMais{
     width: auto;

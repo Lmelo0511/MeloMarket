@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Promocoes(){
     return(
-        <div>
+        <div className="corpo">
             <br></br>
             <div className="tituloEHistoria">
                 <h1 className="Titulo">Nossa história</h1>

@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import API from "../servicos/api";
 import { IoSearchSharp } from "react-icons/io5";
+import { useForm } from "react-hook-form";
 
 export const FormularioCarrinho = () => {
 
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data));
+    }
+
+    const estilo = {
+        color: 'red'
+    };
+
     const [input, setInput] = useState();
     const [cep, setCep] = useState({});
+    const [pagamento, setPagamento] = useState(null);
 
     async function enviarDados(){
-        if(input === ''){
-            alert("Por favor insira um CEP!");
-            return;
+
+        if(input === ""){
+            alert("Preencha o campo CEP!");
         }
 
         try{
@@ -22,9 +38,14 @@ export const FormularioCarrinho = () => {
         }
     }
 
+    const selecionarFormaPagamento = (formaPagamento) => {
+        setPagamento(formaPagamento);
+
+    }
+
     return(
         <div>
-            <div className="formCarrinhoPrincipal">
+            <form className="formCarrinhoPrincipal" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="tituloFormCarrinho">Endreço de Entrega</h1>
                 <p className="descricaoFormCarrinho">Informe o endereço onde deseja receber seu pedido</p>
                 <br></br>
@@ -33,24 +54,34 @@ export const FormularioCarrinho = () => {
                         <input className="CEP" placeholder="Informe seu CEP:" value={input} onChange={(e) => setInput(e.target.value)}></input>
                         <button className="botaoPesquisa" onClick={enviarDados}><IoSearchSharp size={30} color="white"/></button>
                     </div>
+
                     <span className="rua" placeholder="Informe sua Rua:">Rua: {cep.logradouro}</span>
+
                     <div className="numeroEComplemento">
-                        <input className="numero" placeholder="Número:"></input>
+                        <input className="numero" placeholder="Número:"
+                            {...register("numero", {
+                                required: true,
+                                maxLength: 5,
+                            })}>
+                        </input>
                         <input className="complemento" placeholder="Complemento:"></input>
                     </div>
+                    {errors?.numero?.type === "required" && <p className="notificacao" style={estilo}>O campo número é obrigatório!</p>}
+
                     <div className="bairroCidadeEEstado">
                         <span className="bairro" placeholder="Bairro:">Bairro: {cep.bairro}</span>
                         <span className="cidade" placeholder="Cidade:">Cidade: {cep.localidade}</span>
                         <span className="estado" placeholder="Estado:">UF: {cep.uf}</span>
                     </div>
                 </div>
-            </div>
+            </form>
             <div className="formPagamento">
                 <h2 className="tituloFormPagamento">Pagamento</h2>
                 <p className="descricaoFormPagamento">O pagamento é feito na entrega. Escolha a forma que desejar</p>
-                <button className="botaoOpcao">Cartão de Crédito</button>
-                <button className="botaoOpcao">Cartão de Débito</button>
-                <button className="botaoOpcao dinheiro">Dinheiro</button>
+                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('crédito')}>Cartão de Crédito</button>
+                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('débito')}>Cartão de Débito</button>
+                <button className="botaoOpcao dinheiro" onClick={() => selecionarFormaPagamento('dinheiro')}>Dinheiro</button>
+                {pagamento && <p>A forma de pagamento escolhido é: {pagamento}</p>}
             </div>
         </div>
     );

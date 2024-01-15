@@ -4,7 +4,7 @@ import { Produtos } from "./Produtos";
 
 function Promocoes(){
     return(
-      <div>
+      <div className="">
           <br></br>
           <h1 className='primeiroTitulo'>Principais Ofertas do Dia</h1>
           <Produtos

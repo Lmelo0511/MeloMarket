@@ -6,8 +6,7 @@
 
 .secao1{
     background-color: darkgray;
-    width: 100%;
-    height: 110em;
+    height: 200em;
 }
 
 .carrinhoEFormulario{
@@ -46,15 +45,17 @@
     border-radius: 15px;
     padding: 1%;
     width: 30%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .confirmarPedido{
     background-color: lightgreen;
     color: black;
     border: none;
-    margin-left: 30%;
     padding: 2%;
     border-radius: 15px;
+    width: max-content;
 }
 
 .container2{
@@ -184,6 +185,39 @@
     border: none;
 }
 
-.dinheiro{
-    width: 26%;
+@media screen and (max-width: 430px) {
+    .limparCarrinho{
+        font-size: 20px;
+        margin-top: 3em;
+    }
+    .tituloCarrinho{
+        margin-top: 5%;
+        margin-top: 6em;
+    }
+    .formCarrinhoPrincipal{
+        position: absolute;
+        width: 92%;
+        margin-top: 10em;
+    }
+    .formPagamento{
+        position: absolute;
+        width: 92%;
+        margin-top: 42em;
+    }
+    .Total{
+        width: 88%;
+        font-size: 20px;
+    }
+    .confirmarPedido{
+        font-size: 20px;
+    }
+    .complemento{
+        width: 60%;
+    }
+    .containers2{
+        width: auto;
+    }
+    .linha{
+        width: 55%;
+    }
 }
