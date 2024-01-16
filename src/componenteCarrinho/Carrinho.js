@@ -1,61 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import imagem3 from "../Imagens/carrossel-img2.jpg";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { useState, useEffect } from "react";
 import FormularioCarrinho from "./FormularioCarrinho"
+import { ContextoTema } from "../contexto/ContextoTema";
 
-const Carrinho = ({ produtosNoCarrinho }) => {
+const Carrinho = () => {
 
-    const [produtos, setProdutos] = useState([]);
-    
-    useEffect(() => {
-        if(produtosNoCarrinho) {
-            setProdutos(produtosNoCarrinho.map(produto => ({...produto, quantidade: 0})));
-        }
-    }, [produtosNoCarrinho]);
-
-    const AdicionarQuantia = (index) => {
-        const novosProdutos = [...produtos];
-        novosProdutos[index].quantidade++;
-        setProdutos(novosProdutos);
-    };
-
-    const RemoverQuantia = (index) => {
-        const novosProdutos = [...produtos];
-        novosProdutos[index].quantidade--;
-        setProdutos(novosProdutos);
-    };
-
-    const { total, quantidade } = produtos.reduce(
-        (acumulador, item) => {
-            return {
-                quantidade: acumulador.quantidade + item.quantidade,
-                total: acumulador.total + item.preco * item.quantidade,
-            };
-        },
-        {
-            quantidade: 0,
-            total: 0,
-        }
-    );
-
-    const RemoverProduto = (index) => {
-        const novosProdutos = [...produtos];
-        novosProdutos.splice(index, 1);
-        setProdutos(novosProdutos);
-    };
-
-    const LimparCarrinho = () => {
-        setProdutos([]);
-    };
+    const {produtos, AdicionarQuantia, RemoverQuantia, total, RemoverProduto, LimparCarrinho} = useContext(ContextoTema);
 
     return(
         <div className="secao1">
             <br></br>
-            <button className="limparCarrinho" onClick={() => LimparCarrinho()}>Limpar Carrinho</button>
+            <button className="limparCarrinho" onClick={LimparCarrinho}>Limpar Carrinho</button>
             <h1 className="tituloCarrinho">Seu carrinho</h1>
             <div>
                 <FormularioCarrinho />
@@ -64,7 +23,7 @@ const Carrinho = ({ produtosNoCarrinho }) => {
                 {produtos?.map((produto, index) => (
                     <li key={index}>
                     <div className='containers2'>
-                        <button className="botaoApagar" onClick={() => RemoverProduto(index)}>
+                        <button className="botaoApagar" onClick={RemoverProduto}>
                             <FaRegTrashAlt size={30} color="black"/>
                         </button>
                             <img className="imagem3" src={imagem3}></img>
@@ -72,11 +31,11 @@ const Carrinho = ({ produtosNoCarrinho }) => {
                             <p className='descricaoProduto'>{produto.descricao}</p>
                             <p className='precoProduto'>{produto.preco}</p>  
                         <div className='container2'>
-                            <button className="botaoRemover" onClick={() => RemoverQuantia(index)}>
+                            <button className="botaoRemover" onClick={RemoverQuantia}>
                                 <AiFillMinusCircle size={30} color="black"/>
                             </button>
                             <p>Quantidade: {produto.quantidade}</p>
-                            <button className="botaoAdicionar" onClick={() => AdicionarQuantia(index)}>
+                            <button className="botaoAdicionar" onClick={AdicionarQuantia}>
                                 <AiFillPlusCircle size={30} color="black"/>
                             </button>
                         </div>                        
@@ -89,4 +48,5 @@ const Carrinho = ({ produtosNoCarrinho }) => {
         </div>
     )
 }
+
 export default Carrinho;
