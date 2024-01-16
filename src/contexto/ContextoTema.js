@@ -1,13 +1,9 @@
 import { createContext } from "react";
 import { useState, useEffect } from "react";
-import imagem3 from "../Imagens/carrossel-img2.jpg";
-import { FaRegTrashAlt } from "react-icons/fa";
-import { AiFillPlusCircle } from "react-icons/ai";
-import { AiFillMinusCircle } from "react-icons/ai";
 
 export const ContextoTema = createContext();
 
-export const TemaProvider = ({produtosNoCarrinho}) => {
+const TemaProvider = ({produtosNoCarrinho}) => {
 
     const [produtos, setProdutos] = useState([]);
 
@@ -32,7 +28,7 @@ export const TemaProvider = ({produtosNoCarrinho}) => {
         setProdutos(novosProdutos);
     };
 
-    const { total, quantidade } = produtos.reduce(
+    const { total } = produtos.reduce(
         (acumulador, item) => {
             return {
                 quantidade: acumulador.quantidade + item.quantidade,
@@ -56,38 +52,8 @@ export const TemaProvider = ({produtosNoCarrinho}) => {
     };
 
     return(
-        <ContextoTema.Provider value={{produtos, AdicionarQuantia, RemoverQuantia, total, RemoverProduto, LimparCarrinho}}>
-            <div>
-                <br></br>
-                <button className="limparCarrinho" onClick={() => LimparCarrinho()}>Limpar Carrinho</button>
-                <h1 className="tituloCarrinho">Seu carrinho</h1>
-                <ul>
-                    {produtos?.map((produto, index) => (
-                        <li key={index}>
-                            <div className='containers2'>
-                                <button className="botaoApagar" onClick={() => RemoverProduto(index)}>
-                                    <FaRegTrashAlt size={30} color="black"/>
-                                </button>
-                                <img className="imagem3" src={imagem3}></img>
-                                <p className='tituloProduto'>{produto.titulo}</p>
-                                <p className='descricaoProduto'>{produto.descricao}</p>
-                                <p className='precoProduto'>{produto.preco}</p>  
-                                <div className='container2'>
-                                    <button className="botaoRemover" onClick={() => RemoverQuantia(index)}>
-                                        <AiFillMinusCircle size={30} color="black"/>
-                                    </button>
-                                    <p>Quantidade: {produto.quantidade}</p>
-                                    <button className="botaoAdicionar" onClick={() => AdicionarQuantia(index)}>
-                                        <AiFillPlusCircle size={30} color="black"/>
-                                    </button>
-                                </div>                        
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-                <hr className="linha"></hr>
-                <p className="Total">Total: {total}</p>
-            </div>
-        </ContextoTema.Provider>
+        <ContextoTema.Provider value={{produtos, AdicionarQuantia, RemoverQuantia, total, RemoverProduto, LimparCarrinho}}></ContextoTema.Provider>
     )
 }
+
+export default TemaProvider;
