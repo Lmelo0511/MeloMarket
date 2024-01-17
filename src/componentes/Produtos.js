@@ -12,6 +12,11 @@ export const Produtos = ({ id, titulo, descricao, preco, adicionarAoCarrinho }) 
     adicionarAoCarrinho(novoProduto);
   };
 
+  const ProdutoNaLocalStorage = () => {
+    const novoProduto = ({id, titulo, descricao, preco})
+    localStorage.setItem("produtos", JSON.stringify(novoProduto));
+  }
+
   return (
     <>
       <div className='containers'>
@@ -19,7 +24,7 @@ export const Produtos = ({ id, titulo, descricao, preco, adicionarAoCarrinho }) 
         <p className='tituloProduto'>{titulo}</p>
         <p className='descricaoProduto'>{descricao}</p>
         <p className='precoProduto'>{preco}</p>
-        <button className='adicionarCarrinho' onClick={Clicar}>Adicionar ao carrinho</button>
+        <button className='adicionarCarrinho' onClick={() => {Clicar(); ProdutoNaLocalStorage()}}>Adicionar ao carrinho</button>
       </div>
       
       <div className='containers'>
@@ -27,9 +32,8 @@ export const Produtos = ({ id, titulo, descricao, preco, adicionarAoCarrinho }) 
         <p className='tituloProduto'>{titulo}</p>
         <p className='descricaoProduto'>{descricao}</p>
         <p className='precoProduto'>{preco}</p>
-        <button className='adicionarCarrinho' onClick={Clicar}>Adicionar ao carrinho</button>
+        <button className='adicionarCarrinho' onClick={() => {Clicar(); ProdutoNaLocalStorage()}}>Adicionar ao carrinho</button>
       </div>
     </>
   );
 }
-
