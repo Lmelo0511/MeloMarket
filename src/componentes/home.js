@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import imagem1 from "../Imagens/feira-supermercado-hortifruti.jpg"
 import imagem2 from "../Imagens/carrossel-img1.jpg"
 import { Link } from 'react-router-dom';
 import { Produtos } from './Produtos';
-import Carrinho from '../componenteCarrinho/Carrinho';
 
 function Home() {
-
-  const [carrinho, setCarrinho] = useState([]);
-
-  const adicionarAoCarrinho = (novoProduto) => {
-    const novosProdutos = [...carrinho];
-    novosProdutos.push(novoProduto);
-    setCarrinho(novosProdutos);
-  };
 
   return (
     <div className="secao1">
@@ -48,23 +39,19 @@ function Home() {
             titulo="titulo1"
             descricao="descricao1" 
             preco="10.98"    
-            adicionarAoCarrinho={adicionarAoCarrinho}   
           />
           <Produtos
             id={2}
             titulo="titulo2"
             descricao="descricao2" 
             preco="20.80"       
-            adicionarAoCarrinho={adicionarAoCarrinho} 
           />
           <Produtos
             id={3}
             titulo="titulo3"
             descricao="descricao3" 
             preco="30.50"       
-            adicionarAoCarrinho={adicionarAoCarrinho} 
           />
-          <Carrinho produtosNoCarrinho={carrinho} />
           <div className='botaoPrincipal'>
             <button className='botaoMais'>
               <Link className='acessoPromocoes' to='promocoes'>Saiba Mais</Link>

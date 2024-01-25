@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Produtos } from "./Produtos";
+import { ContextoTema } from "../contexto/ContextoTema";
 
 function Promocoes(){
+
+  const {} = useContext(ContextoTema);
+
     return(
       <div className="">
           <br></br>
@@ -11,19 +15,19 @@ function Promocoes(){
             id={1}
             titulo="titulo1"
             descricao="descricao1" 
-            preco="preco1"       
+            preco="10.98"    
           />
           <Produtos
-            id={1}
+            id={2}
             titulo="titulo2"
             descricao="descricao2" 
-            preco="preco2"       
+            preco="20.80"       
           />
           <Produtos
-            id={1}
+            id={3}
             titulo="titulo3"
             descricao="descricao3" 
-            preco="preco3"       
+            preco="30.50"       
           />
           <footer className='rodape'>
               <div className='Informacao'>

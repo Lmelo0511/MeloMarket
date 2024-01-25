@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import imagem3 from "../Imagens/carrossel-img2.jpg";
 import imagem2 from "../Imagens/carrossel-img1.jpg";
+import { ContextoTema } from "../contexto/ContextoTema";
 
-export const Produtos = ({ id, titulo, descricao, preco, adicionarAoCarrinho }) => {
+export const Produtos = ({ id, titulo, descricao, preco }) => {
 
   const [carrinho, setCarrinho] = useState([]);
 
+  const {adicionarAoCarrinho} = useContext(ContextoTema)
+
   const Clicar = () => {
-    const novoProduto = { id, titulo, descricao, preco };
+    const novoProduto = { id, titulo, descricao, preco, quantidade: 1 };
     setCarrinho([...carrinho, novoProduto]);
     adicionarAoCarrinho(novoProduto);
   };
 
   const ProdutoNaLocalStorage = () => {
-    const novoProduto = ({id, titulo, descricao, preco})
+    const novoProduto = ({id, titulo, descricao, preco});
     localStorage.setItem("produtos", JSON.stringify(novoProduto));
   }
 

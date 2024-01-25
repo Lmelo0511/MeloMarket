@@ -1,18 +1,17 @@
 import { createContext } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const ContextoTema = createContext();
 
-const TemaProvider = ({produtosNoCarrinho}) => {
+const TemaProvider = ({children}) => {
 
     const [produtos, setProdutos] = useState([]);
 
-    useEffect(() => {
-        if(produtosNoCarrinho) {
-
-            setProdutos(produtosNoCarrinho.map(produto => ({...produto, quantidade: 0})));
-        }
-    }, [produtosNoCarrinho]);
+    const adicionarAoCarrinho = (novoProduto) => {
+        const novosProdutos = [...produtos];
+        novosProdutos.push(novoProduto);
+        setProdutos(novosProdutos);
+    };
 
     const AdicionarQuantia = (index) => {
         const novosProdutos = [...produtos];
@@ -52,7 +51,7 @@ const TemaProvider = ({produtosNoCarrinho}) => {
     };
 
     return(
-        <ContextoTema.Provider value={{produtos, AdicionarQuantia, RemoverQuantia, total, RemoverProduto, LimparCarrinho}}></ContextoTema.Provider>
+        <ContextoTema.Provider value={{produtos, AdicionarQuantia, RemoverQuantia, total, RemoverProduto, LimparCarrinho, adicionarAoCarrinho}}>{children}</ContextoTema.Provider>
     )
 }
 
