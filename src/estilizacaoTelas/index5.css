@@ -37,14 +37,11 @@
 }
 
 .Total{
-    margin: 10% 5%;
     font-size: 30px;
     color: white;
     font-family: cursive;
-    border: 3px solid lightgreen;
     border-radius: 15px;
-    padding: 1%;
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -156,6 +153,16 @@
     padding: 5% 2% 0%;
     float: right;
     width: 40%;
+    position: static;
+}
+
+.metodoPagamento{
+    margin: -5% 15% 5% 5%;
+    border: 5px solid lightgreen;
+    border-radius: 15px;
+    padding: 1%;
+    float: left;
+    width: 30%;
     position: static;
 }
 

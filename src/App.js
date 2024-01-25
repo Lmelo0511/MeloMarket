@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Roteador from './roteador';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
+import { ContextoTema } from './contexto/ContextoTema';
 
 function App() {
 
   const[menuAberto, setMenuAberto] = useState(false);
+  const {total} = useContext(ContextoTema);
 
   function paginas(){
     setMenuAberto(!menuAberto);
@@ -32,6 +34,7 @@ function App() {
           <Link className='linkLogo' to='home'>MeloMarket</Link>  
         </p>
         <button className='botaoCarrinho'>
+          <span>{total.quantidade}</span>
           <Link className='atalhos' to='carrinho'><FaShoppingCart size={30} color="black"/></Link>
         </button>
       </header> 

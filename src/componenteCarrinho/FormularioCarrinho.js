@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import API from "../servicos/api";
 import { IoSearchSharp } from "react-icons/io5";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { ContextoTema } from "../contexto/ContextoTema";
+import { useContext } from "react";
 
 export const FormularioCarrinho = () => {
+
+    const {total} = useContext(ContextoTema);
 
     const {
         register,
@@ -78,10 +83,23 @@ export const FormularioCarrinho = () => {
             <div className="formPagamento">
                 <h2 className="tituloFormPagamento">Pagamento</h2>
                 <p className="descricaoFormPagamento">O pagamento é feito na entrega. Escolha a forma que desejar</p>
-                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('crédito')}>Cartão de Crédito</button>
-                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('débito')}>Cartão de Débito</button>
-                <button className="botaoOpcao dinheiro" onClick={() => selecionarFormaPagamento('dinheiro')}>Dinheiro</button>
+                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('crédito')}
+                    {...register("pagamento", {
+                        required: true,
+                    })}>Cartão de Crédito</button>
+                <button className="botaoOpcao" onClick={() => selecionarFormaPagamento('débito')}
+                    {...register("pagamento", {
+                        required: true,
+                    })}>Cartão de Débito</button>
+                <button className="botaoOpcao dinheiro" onClick={() => selecionarFormaPagamento('dinheiro')}
+                    {...register("pagamento", {
+                        required: true,
+                    })}>Dinheiro</button>
                 {pagamento && <p>A forma de pagamento escolhido é: {pagamento}</p>}
+                {errors?.pagamento?.type === "required" && <p className="notificacao" style={estilo}>Informe um método de pagamento</p>}
+            </div>
+            <div className="metodoPagamento">
+                <p className="Total">Total: R$ {total} <button className="confirmarPedido" onClick={enviarDados}><Link to='resultado'>confirmar pedido</Link></button></p>
             </div>
         </div>
     );
