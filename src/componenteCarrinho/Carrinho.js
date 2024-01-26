@@ -49,7 +49,7 @@ export const Carrinho = () => {
                         </ul>
                     </React.Fragment>
                     :
-                    <>Não há produtos no seu carrinho!</>
+                    <p className="semProdutos">Não há produtos no seu carrinho!</p>
                 }
                 <hr className="linha"></hr>
             </div>
