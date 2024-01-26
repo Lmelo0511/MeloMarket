@@ -9,8 +9,9 @@ import { ContextoTema } from "../contexto/ContextoTema";
 
 export const Carrinho = () => {
 
-    const {produtos, AdicionarQuantia, RemoverQuantia, RemoverProduto, LimparCarrinho} = useContext(ContextoTema);
+    const {produtos, RemoverProduto, AdicionarQuantia, RemoverQuantia, LimparCarrinho} = useContext(ContextoTema);
 
+   
     return(
         <div>
             <div>
@@ -46,29 +47,27 @@ export const Carrinho = () => {
                                 </div>
                                 </li>
                             ))}
-                        </ul>
+                            </ul>
                     </React.Fragment>
                     :
-                    <p className="semProdutos">Não há produtos no seu carrinho!</p>
+                    <p className="semProdutos"> Não há produtos no carrinho.</p>
                 }
                 <hr className="linha"></hr>
             </div>
-            <br></br>
-            <br></br>
             <footer className='rodape'>
                 <div className='Informacao' color='white'>
-                  <h3 className='titulo3'>Endereço:</h3>
-                  <br></br><br></br>
-                  <p className='endereco'>
+                    <h3 className='titulo3'>Endereço:</h3>
+                    <br></br><br></br>
+                    <p className='endereco'>
                     Av. Alípio Octaviano de Souza paraíso<br></br> 
                     Bairro: Terra Brasilis<br></br>
                     Cidade: Itupeva - SP
-                  </p>
-                  <p className='Logo2'>MeloMarket</p>
+                    </p>
+                    <p className='Logo2'>MeloMarket</p>
                 </div>
             </footer>
         </div>
-    )
+    );
 }
 
 export default Carrinho;

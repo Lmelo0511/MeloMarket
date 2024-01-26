@@ -9,7 +9,7 @@ import { ContextoTema } from './contexto/ContextoTema';
 function App() {
 
   const[menuAberto, setMenuAberto] = useState(false);
-  const {total} = useContext(ContextoTema);
+  const {contador} = useContext(ContextoTema);
 
   function paginas(){
     setMenuAberto(!menuAberto);
@@ -34,8 +34,8 @@ function App() {
           <Link className='linkLogo' to='home'>MeloMarket</Link>  
         </p>
         <button className='botaoCarrinho'>
-          <span>{total.quantidade}</span>
           <Link className='atalhos' to='carrinho'><FaShoppingCart size={30} color="black"/></Link>
+          <span className='quantidadeCarrinho'>{contador}</span>
         </button>
       </header> 
       <Roteador/>

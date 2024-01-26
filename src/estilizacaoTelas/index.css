@@ -26,6 +26,12 @@
   background-color: transparent;
   border: none;
   padding-right: 1%;
+  display: flex;
+  margin: 1%;
+}
+
+.quantidadeCarrinho{
+  font-size: 20px;
 }
 
 .linkLogo{
