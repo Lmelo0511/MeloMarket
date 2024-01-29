@@ -5,6 +5,7 @@ import Promocoes from "./componentes/Promocoes";
 import Sobre from "./componentes/Sobre"
 import Home from "./componentes/home";
 import Carrinho from "./componenteCarrinho/Carrinho";
+import PedidoConfirmado from "./componentes/PedidoConfirmado";
 
 function Roteador(){
     return(
@@ -43,6 +44,12 @@ function Roteador(){
           path='home'
           element = {
             <Home/>
+          }> 
+      </Route>
+      <Route
+          path='confirmado'
+          element = {
+            <PedidoConfirmado/>
           }> 
       </Route>
     </Routes>    

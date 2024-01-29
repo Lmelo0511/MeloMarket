@@ -203,6 +203,36 @@
     border: none;
 }
 
+.Titulo2{
+    margin: 9% 6% 1%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.descricao{
+    margin: 9% 6%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 25px; 
+}
+
+.informacoesFinais{
+    border: 5px solid lightgreen;
+    padding: 5%;
+    width: 30%;
+    position: absolute;
+    margin: 5% 5%;
+    border-radius: 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.imagem4{
+    width: 30%;
+    float: right;
+    margin: 10% 10%;
+}
+
 @media screen and (max-width: 430px) {
     .limparCarrinho{
         font-size: 20px;
@@ -237,5 +267,20 @@
     }
     .linha{
         width: 55%;
+    }
+    .Titulo2{
+        margin: 20% 6%;
+    }
+    .descricao{
+        font-size: 20px;
+    }
+    .informacoesFinais{
+        position: absolute;
+        width: 90%;
+    }
+    .imagem4{
+        width: 90%;
+        position: absolute;
+        margin: 30em 5%;
     }
 }

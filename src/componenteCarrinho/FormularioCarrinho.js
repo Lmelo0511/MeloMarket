@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import API from "../servicos/api";
 import { IoSearchSharp } from "react-icons/io5";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ContextoTema } from "../contexto/ContextoTema";
 import { useContext } from "react";
 
 export const FormularioCarrinho = () => {
 
     const {total} = useContext(ContextoTema);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -18,7 +19,7 @@ export const FormularioCarrinho = () => {
 
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
-    }
+    };
 
     const estilo = {
         color: 'red'
@@ -41,12 +42,24 @@ export const FormularioCarrinho = () => {
             alert("Erro ao bucar o CEP! insira um CEP válido")
             setInput("");
         }
-    }
+    };
 
     const selecionarFormaPagamento = (formaPagamento) => {
         setPagamento(formaPagamento);
 
-    }
+    };
+
+    const enviandoFormulario = () => {
+        const enviarDados = {
+            logradouro: cep.logradouro,
+            bairro: cep.bairro,
+            localidade: cep.localidade,
+            uf: cep.uf,
+            pagamento: pagamento,
+        };
+
+        navigate('/confirmado', {state: enviarDados})
+    };
 
     return(
         <div>
@@ -95,11 +108,10 @@ export const FormularioCarrinho = () => {
                     {...register("pagamento", {
                         required: true,
                     })}>Dinheiro</button>
-                {pagamento && <p>A forma de pagamento escolhido é: {pagamento}</p>}
                 {errors?.pagamento?.type === "required" && <p className="notificacao" style={estilo}>Informe um método de pagamento</p>}
             </div>
             <div className="metodoPagamento">
-                <p className="Total">Total: R$ {total} <button className="confirmarPedido" onClick={enviarDados}><Link className="atalho" to='resultado'>confirmar pedido</Link></button></p>
+                <p className="Total">Total: R$ {total} <button className="confirmarPedido" onClick={enviandoFormulario}><Link className="atalho" to='confirmado'>confirmar pedido</Link></button></p>
             </div>
         </div>
     );
