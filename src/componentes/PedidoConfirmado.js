@@ -7,7 +7,6 @@ const PedidoConfirmado = () => {
     const {state: {logradouro, bairro, localidade, uf, pagamento}} = useLocation();
 
     return(
-        <>
             <div>
                 <br></br>
                 <br></br>
@@ -31,7 +30,6 @@ const PedidoConfirmado = () => {
                     />
                 </div>
             </div>
-        </>
     )
 } 
 

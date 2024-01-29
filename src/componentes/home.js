@@ -9,7 +9,7 @@ import { Produtos } from './Produtos';
 function Home() {
 
   return (
-    <div className="secao1">
+    <div>
       <div>
         <Carousel>
           <Carousel.Item className='carrosel-item'>
@@ -30,7 +30,7 @@ function Home() {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div className='secao2'>
+      <div className='secao1'>
         <br></br>
         <h2 className='titulo2'>Principais Ofertas do Dia</h2>
         <section>

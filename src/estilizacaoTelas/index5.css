@@ -6,7 +6,6 @@
 
 .secao1{
     background-color: darkgray;
-    height: 200em;
 }
 
 .carrinhoEFormulario{
@@ -242,6 +241,14 @@
         margin-top: 5%;
         margin-top: 6em;
     }
+    .todosFormularios{
+        margin-top: 9em;
+        position: absolute;
+        width: 95%;
+    }
+    .rodape2{
+        margin-top: 70em;
+    }
     .formCarrinhoPrincipal{
         position: absolute;
         width: 92%;
@@ -251,6 +258,9 @@
         position: absolute;
         width: 92%;
         margin-top: 42em;
+    }
+    .metodoPagamento{
+        width: 90%;
     }
     .Total{
         width: 88%;

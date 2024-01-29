@@ -54,7 +54,7 @@ export const Carrinho = () => {
                 }
                 <hr className="linha"></hr>
             </div>
-            <footer className='rodape'>
+            <footer className='rodape2'>
                 <div className='Informacao' color='white'>
                     <h3 className='titulo3'>Endereço:</h3>
                     <br></br><br></br>
