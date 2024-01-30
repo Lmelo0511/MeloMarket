@@ -232,7 +232,6 @@
     color: white;
 }
 
-
 .imagem4{
     width: 120%;
     margin: 70%;
@@ -291,12 +290,13 @@
         font-size: 20px;
     }
     .informacoesFinais{
-        position: absolute;
         width: 90%;
+    }
+    .informacoesFinaisEImagem{
+        display: block;
     }
     .imagem4{
         width: 90%;
-        position: absolute;
-        margin: 30em 5%;
+        margin: 2em 5%;
     }
 }
