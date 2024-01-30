@@ -7,11 +7,12 @@ const PedidoConfirmado = () => {
     const {state: {logradouro, bairro, localidade, uf, pagamento}} = useLocation();
 
     return(
-            <div>
-                <br></br>
-                <br></br>
-                <h2 className="Titulo2">Pedido Confirmado</h2>
-                <span className="descricao">Agora é só aguardar que logo sua compra chegará até você</span>
+        <div>
+            <br></br>
+            <br></br>
+            <h2 className="Titulo2">Pedido Confirmado</h2>
+            <span className="descricao">Agora é só aguardar que logo sua compra chegará até você</span>
+            <div className="informacoesFinaisEImagem">
                 <div className="informacoesFinais">
                     <p>Endereço de entrega:</p>
                     <hr></hr>
@@ -22,7 +23,7 @@ const PedidoConfirmado = () => {
                     <p>Estado: {uf}</p>
                     <p>Forma de pagamento: {pagamento}</p>
                 </div>
-                <div>
+                <div className="imagem">
                     <img 
                         className="imagem4"
                         src={imagem4}
@@ -30,6 +31,7 @@ const PedidoConfirmado = () => {
                     />
                 </div>
             </div>
+        </div>
     )
 } 
 

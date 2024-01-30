@@ -18,9 +18,6 @@ export const Carrinho = () => {
                 <br></br>
                 <button className="limparCarrinho" onClick={LimparCarrinho}>Limpar Carrinho</button>
                 <h1 className="tituloCarrinho">Seu carrinho</h1>
-                <div>
-                    <FormularioCarrinho />
-                </div>
                 {
                     produtos.length > 0 ?
                     <React.Fragment>
@@ -53,6 +50,9 @@ export const Carrinho = () => {
                     <p className="semProdutos"> Não há produtos no carrinho.</p>
                 }
                 <hr className="linha"></hr>
+                <div>
+                    <FormularioCarrinho />
+                </div>
             </div>
             <footer className='rodape2'>
                 <div className='Informacao' color='white'>
