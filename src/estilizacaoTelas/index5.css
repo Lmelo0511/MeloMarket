@@ -238,6 +238,10 @@
 }
 
 @media screen and (max-width: 1030px){
+    .Total,
+    .confirmarPedido{
+        font-size: 19px;
+    }
     .informacoesFinais{
         margin: 10% 20%;
         width: 60%;

@@ -29,7 +29,7 @@
 
 .Informacao{
     background-color: darkgray;
-    height: 35em;
+    height: 50em;
 }
 
 @media screen and (max-width: 430px) {
