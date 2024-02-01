@@ -44,7 +44,6 @@
 .Total{
     font-size: 25px;
     color: white;
-    font-family: cursive;
     border-radius: 15px;
     width: 100%;
     display: flex;
@@ -117,7 +116,6 @@
 .descricaoFormPagamento{
     font-size: 20px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .formCarrinho{
