@@ -11,7 +11,7 @@ const PedidoConfirmado = () => {
             <br></br>
             <br></br>
             <h2 className="Titulo2">Pedido Confirmado</h2>
-            <span className="descricao">Agora é só aguardar que logo sua compra chegará até você</span>
+            <p className="descricao">Agora é só aguardar que logo sua compra chegará até você</p>
             <div className="informacoesFinaisEImagem">
                 <div className="informacoesFinais">
                     <p>Endereço de entrega:</p>
