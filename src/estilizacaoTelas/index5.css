@@ -276,9 +276,10 @@
         margin: 9em 6%;
         position: absolute;
         width: 95%;
+        top: auto;
     }
     .rodape2{
-        margin-top: 75em;
+        margin-top: 85em;
     }
     .formCarrinhoPrincipal{
         position: absolute;
