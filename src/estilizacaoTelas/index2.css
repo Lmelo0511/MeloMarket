@@ -5,8 +5,8 @@
 }
 
 .Mapa{
-   width: 30em;
-   height: 30em;
+   width: -webkit-fill-available;
+   height: 25em;
    background-color: darkgray;
    border-radius: 15px;
 }
@@ -14,12 +14,11 @@
 .mapaEFormulario{
    display: flex;
    flex-direction: row-reverse;
-   align-items: center;
-   justify-content: space-between;
+   justify-content: center;
 }
 
 .tituloEMapa{
-   margin: 10% 6% 5% 5%;
+   margin: 10% 5% 5% 5%;
    border: 5px solid lightgreen;
    border-radius: 15px;
    padding: 7% 7% 7% 7%;
