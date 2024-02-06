@@ -37,4 +37,7 @@
     .textoHistoria{
         margin-top: 2em;
     }
+    .Informacao{
+        display: grid;
+    }
 }

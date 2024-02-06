@@ -163,6 +163,9 @@
    .formulario{
       width: 90%;
    }
+   .endereco{
+      padding: 20% 0% 2% 4%;
+   }
 }
 
 @media screen and (max-width: 1030px) {
