@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
+import testarConexao from "../testeConexao/testeConexao";
 
 function Contato() {
   const {
@@ -13,8 +14,12 @@ function Contato() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit =(data) => {
+  const onSubmit = (data) => {
     alert(JSON.stringify(data));
+  }
+
+  const conexaoBanco = () => {
+    testarConexao();
   }
 
   const style = {
@@ -71,7 +76,7 @@ function Contato() {
           {errors?.texto?.type === "required" && <p className="notificacao" style={style}>O campo mensagens é obrigatório!</p>}
 
           <div className='primeiroBotao'>
-            <button className='botaoEnviar' type='submit'><Link className='linkLogo' to='/'>Enviar</Link>  </button>  
+            <button className='botaoEnviar' onClick={conexaoBanco} type='submit'><Link className='linkLogo' to='/'>Enviar</Link>  </button>  
           </div>      
         </form>
       </div>
