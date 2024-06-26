@@ -4,29 +4,44 @@ import { MdEmail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-import testarConexao from "../testeConexao/testeConexao";
+//import axios from "axios";
+//import { response } from "express";
 
 function Contato() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
-  }
 
-  const conexaoBanco = () => {
-    testarConexao();
+    /*
+
+    useEffect(() => {
+      
+      axios.post('??', {
+        nome: 'data.firtname',
+      })
+  
+      .then(response => {
+        console.log(response.data);
+        alert('Dados enviado com sucesso!');
+      })
+  
+      .catch(error => {
+        console.log('Erro ao enviar os dados', error);
+        alert('Erro ao enviar os dados');
+      });
+    });
+
+    */
   }
 
   const style = {
     color: 'red'
   };
-
-  console.log(watch("example"));
 
   return (
     <div>
@@ -42,7 +57,7 @@ function Contato() {
           <hr className='Linha'></hr>
           <div className='secaoNome'>
             <FaUser size={30} color='black'/>
-            <input placeholder=" Nome:" className='inserindoNome'
+            <input placeholder=" Nome:" className='inserindoNome' 
               {...register("firstName", {
                 required: true,
                 maxLength: 20,
@@ -56,7 +71,7 @@ function Contato() {
 
           <div className='secaoEmail'>
             <MdEmail size={30} color='black'/>
-            <input className="inserindoEmail" placeholder=" E-mail:" {...register("email", { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
+            <input className="inserindoEmail" placeholder="E-mail:" {...register("email", { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
           </div> 
           {errors?.texto?.type === "required" && <p className="notificacao" style={style}>O campo e-mail é obrigatório!</p>} 
           {errors?.email?.type === "pattern" && (<p className="notificacao" style={style}>Digite um e-mail válido!</p>)}
@@ -76,7 +91,7 @@ function Contato() {
           {errors?.texto?.type === "required" && <p className="notificacao" style={style}>O campo mensagens é obrigatório!</p>}
 
           <div className='primeiroBotao'>
-            <button className='botaoEnviar' onClick={conexaoBanco} type='submit'><Link className='linkLogo' to='/'>Enviar</Link>  </button>  
+            <button className='botaoEnviar' type='submit'><Link className='linkLogo' to='/'>Enviar</Link>  </button>  
           </div>      
         </form>
       </div>

@@ -28,10 +28,10 @@ export const Carrinho = () => {
                                     <button className="botaoApagar" onClick={() => RemoverProduto(index)}>
                                         <FaRegTrashAlt size={30} color="black"/>
                                     </button>
-                                        <img className="imagem3" src={imagem3}></img>
-                                        <p className='tituloProduto'>{produto.titulo}</p>
-                                        <p className='descricaoProduto'>{produto.descricao}</p>
-                                        <p className='precoProduto'>{produto.preco}</p>  
+                                    <img className="imagem3" src={imagem3}></img>
+                                    <p className='tituloProduto'>{produto.titulo}</p>
+                                    <p className='descricaoProduto'>{produto.descricao}</p>
+                                    <p className='precoProduto'>{produto.preco}</p>  
                                     <div className='container2'>
                                         <button className="botaoRemover" onClick={() => RemoverQuantia(index)}>
                                             <AiFillMinusCircle size={30} color="black"/>

@@ -38,6 +38,7 @@ export const FormularioCarrinho = () => {
         try{
             const resposta = await API.get(`${input}/json`);
             setCep(resposta.data)
+            console.log(resposta)
         } catch{
             alert("Erro ao bucar o CEP! insira um CEP válido")
             setInput("");
