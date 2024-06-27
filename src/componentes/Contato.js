@@ -32,7 +32,7 @@ function Contato() {
   
       .catch(error => {
         console.log('Erro ao enviar os dados', error);
-        alert('Erro ao enviar os dados');
+        alert('Erro ao enviar os dados!');
       });
     });
 
