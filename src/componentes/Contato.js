@@ -4,8 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-//import axios from "axios";
-//import { response } from "express";
+import axios from "axios";
 
 function Contato() {
   const {
@@ -16,27 +15,22 @@ function Contato() {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
-
-    /*
-
-    useEffect(() => {
       
-      axios.post('??', {
-        nome: 'data.firtname',
-      })
-  
-      .then(response => {
-        console.log(response.data);
-        alert('Dados enviado com sucesso!');
-      })
-  
-      .catch(error => {
-        console.log('Erro ao enviar os dados', error);
-        alert('Erro ao enviar os dados!');
-      });
-    });
+    axios.post('http://localhost:3001', {
+      nome: 'data.firstName',
+      email: 'data.email',
+      mensagem: 'data.texto' 
+    })
 
-    */
+    .then(response => {
+      console.log(response.data);
+      alert('Dados enviado com sucesso!');
+    })
+
+    .catch(error => {
+      console.log('Erro ao enviar os dados', error);
+      alert('Erro ao enviar os dados!');
+    });
   }
 
   const style = {
@@ -71,7 +65,7 @@ function Contato() {
 
           <div className='secaoEmail'>
             <MdEmail size={30} color='black'/>
-            <input className="inserindoEmail" placeholder="E-mail:" {...register("email", { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
+            <input className="inserindoEmail" placeholder=" E-mail:" {...register("email", { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
           </div> 
           {errors?.texto?.type === "required" && <p className="notificacao" style={style}>O campo e-mail é obrigatório!</p>} 
           {errors?.email?.type === "pattern" && (<p className="notificacao" style={style}>Digite um e-mail válido!</p>)}
