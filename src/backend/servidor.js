@@ -29,7 +29,7 @@ app.post('http://localhost:3001', (req, res) => {
 
     const consulta = "INSERT INTO Melo_Market (nome, email, Mensagens) VALUES (?, ?)";
 
-    connection.query(consulta, [nome, email], (err, resultado) => {
+    connection.query(consulta, [nome, email, mensagem], (err, resultado) => {
         if(err){
             console.error('Erro ao executlar a query: ', err);
             res.status(500).json({ error: 'Erro ao buscar dados.' });
