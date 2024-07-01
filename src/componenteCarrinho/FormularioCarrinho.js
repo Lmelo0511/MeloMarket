@@ -114,7 +114,7 @@ export const FormularioCarrinho = () => {
                     {errors?.pagamento?.type === "required" && <p className="notificacao" style={estilo}>Informe um método de pagamento</p>}
                 </div>
                 <div className="metodoPagamento">
-                    <p className="Total">Total: R$ {total} <button className="confirmarPedido" onClick={enviandoFormulario}><Link className="atalho" to='confirmado'>confirmar pedido</Link></button></p>
+                    <p className="Total">Total: <br></br>R$ {total} <button className="confirmarPedido" onClick={enviandoFormulario}><Link className="atalho" to='confirmado'>confirmar pedido</Link></button></p>
                 </div>
             </div>
         </>

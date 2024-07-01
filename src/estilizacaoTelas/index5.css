@@ -169,8 +169,8 @@
     margin: 0% 0% 5% 5%;
     border: 5px solid lightgreen;
     border-radius: 15px;
-    padding: 1.5% 1.3% 0%;
     position: static;
+    width: 40%;
 }
 
 .atalho{

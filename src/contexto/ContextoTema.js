@@ -43,7 +43,7 @@ const TemaProvider = ({children}) => {
         },
         {
             quantidade: 0,
-            total: 0.00,
+            total: 0,
         }
     );
 
